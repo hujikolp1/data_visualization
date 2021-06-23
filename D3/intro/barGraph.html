@@ -1,11 +1,12 @@
 <style>
-    .bar {
-      width: 25px;
-      height: 100px;
-      display: inline-block;
-      background-color: blue;
-    }
-  </style>
+  .bar {
+    width: 25px;
+    height: 100px;
+    margin: 2px; 
+    display: inline-block;
+    background-color: blue;
+  }
+</style>
   <body>
     <script src = "https://d3js.org/d3.v4.min.js"></script>
     <script>
@@ -16,12 +17,6 @@
         .enter()
         .append("div")
         .attr("class", "bar")
-        // Add your code below this line
-  
-        .style('height', (d)=>{
-          return d + 'px'
-        })
-  
-        // Add your code above this line
+        .style("height", (d) => (d*10 + "px")) 
     </script>
   </body>
