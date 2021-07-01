@@ -2,9 +2,12 @@
 
 ## Contents 
 
-### Intro (Bar Graphs and Scatter Plots)
+##### Intro (Bar Graphs and Scatter Plots)
 
-### AJAX JSON APIs 
+##### AJAX JSON APIs 
+
+
 
 ## Resources Used
-### D3 (https://d3js.org/) 
+
+##### D3 (https://d3js.org/) 
