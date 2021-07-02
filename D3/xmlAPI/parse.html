@@ -1,22 +1,30 @@
 <script>
     document.addEventListener('DOMContentLoaded', function(){
       document.getElementById('getMessage').onclick = function(){
+        var url1 = 'https://freecodecamp.org/json/cats.json'; 
+        var url2 = 'https://jsonplaceholder.typicode.com/posts/1'; 
+
         const req = new XMLHttpRequest();
-        req.open("GET",'/json/cats.json',true);
+        req.open("GET", url2, true);
         req.send();
         req.onload = function(){
-          const json = JSON.parse(req.responseText);
-          let html = "";
-  
-            json.forEach(function(val) {
-                const keys = Object.keys(val);
-                html += "<div class = 'cat'>";
-                keys.forEach(function(key) {
-                html += "<strong>" + key + "</strong>: " + val[key] + "<br>";
-                });
-                html += "</div><br>";
-            });
 
+          const json = JSON.parse(req.responseText);
+          console.log('JSON ', json); 
+          let html = "";
+          let arr = []
+          arr.push(json)
+    
+          arr.forEach( (val) => {
+
+              const keys = Object.keys(val);
+              html += "<div class = 'blob'>";
+              keys.forEach(function(key) {
+                html += "<strong>" + key + "</strong>: " + val[key] + "<br>";
+              });
+              html += "</div><br>";
+
+          });
           document.getElementsByClassName('message')[0].innerHTML = html;
         };
       };
@@ -50,7 +58,7 @@
     }
   </style>
   
-  <h1>Cat Photo Finder</h1>
+  <h1>Parse into HTML</h1>
   <p class="message box">
     The message will go here
   </p>

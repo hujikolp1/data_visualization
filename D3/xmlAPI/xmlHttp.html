@@ -3,7 +3,7 @@
     document.addEventListener('DOMContentLoaded', function(){
       document.getElementById('getMessage').onclick = function(){
      
-            // Create the XHR object.
+        // Create the XHR object.
         function createCORSRequest(method, url) {
             var xhr = new XMLHttpRequest();
             if ("withCredentials" in xhr) {
@@ -41,6 +41,7 @@
                 var text = xhr.responseText;
                 var title = getTitle(text);
                 console.log('Response from CORS request to ' + url + ': ' + title);
+                console.log('Full XHR: ', xhr)
             };
 
             xhr.onerror = function() {
@@ -85,7 +86,7 @@
     }
   </style>
   
-  <h1>AAPL stock info</h1>
+  <h1>Create XHR CORS Request</h1>
   <p class="message box">
     API response will go here
   </p>
