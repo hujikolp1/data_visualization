@@ -1,0 +1,28 @@
+<header>
+  Methods for getting API data with fetch(). Check console output.
+</header>
+<body>
+
+  <script>
+
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+  </script>
+  <script>
+    // ASYNC 
+    // async function fetchText() {
+    //   let response = await fetch('http://example.com/');
+    //   let data = await response.text();
+    //   console.log(data);
+    // }
+  </script>
+
+</body>
+
+
+

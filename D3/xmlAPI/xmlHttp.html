@@ -42,6 +42,8 @@
                 var title = getTitle(text);
                 console.log('Response from CORS request to ' + url + ': ' + title);
                 console.log('Full XHR: ', xhr)
+                document.getElementsByClassName('message')[0].textContent = xhr;
+
             };
 
             xhr.onerror = function() {
@@ -86,7 +88,7 @@
     }
   </style>
   
-  <h1>Create XHR CORS Request</h1>
+  <h1>Create XHR Request</h1>
   <p class="message box">
     API response will go here
   </p>
